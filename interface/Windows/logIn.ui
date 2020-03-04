@@ -6,12 +6,21 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>382</width>
-    <height>288</height>
+    <width>387</width>
+    <height>306</height>
    </rect>
   </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
   <property name="focusPolicy">
-   <enum>Qt::NoFocus</enum>
+   <enum>Qt::TabFocus</enum>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::DefaultContextMenu</enum>
   </property>
   <property name="windowTitle">
    <string>Log in</string>
@@ -83,16 +92,16 @@
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="passwordRecoveryButton">
+     <widget class="QPushButton" name="unregisteredButton">
       <property name="text">
-       <string>Забыли пароль?</string>
+       <string>Зарегистрироваться</string>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="unregisteredButton">
+     <widget class="QLabel" name="errorLabel">
       <property name="text">
-       <string>Зарегистрироваться</string>
+       <string/>
       </property>
      </widget>
     </item>

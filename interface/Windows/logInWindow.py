@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'D:\pycharmworkspace\TestingSystem\интерфейс\logIn.ui'
+# Form implementation generated from reading ui file 'D:\pycharmworkspace\Intellectual-testing-system\interface\Windows\logIn.ui'
 #
 # Created by: PyQt5 UI code generator 5.13.0
 #
@@ -13,8 +13,14 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(382, 288)
-        MainWindow.setFocusPolicy(QtCore.Qt.NoFocus)
+        MainWindow.resize(387, 306)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(MainWindow.sizePolicy().hasHeightForWidth())
+        MainWindow.setSizePolicy(sizePolicy)
+        MainWindow.setFocusPolicy(QtCore.Qt.TabFocus)
+        MainWindow.setContextMenuPolicy(QtCore.Qt.DefaultContextMenu)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.centralwidget)
@@ -48,12 +54,13 @@ class Ui_MainWindow(object):
         self.logInButton = QtWidgets.QPushButton(self.centralwidget)
         self.logInButton.setObjectName("logInButton")
         self.verticalLayout.addWidget(self.logInButton)
-        self.passwordRecoveryButton = QtWidgets.QPushButton(self.centralwidget)
-        self.passwordRecoveryButton.setObjectName("passwordRecoveryButton")
-        self.verticalLayout.addWidget(self.passwordRecoveryButton)
         self.unregisteredButton = QtWidgets.QPushButton(self.centralwidget)
         self.unregisteredButton.setObjectName("unregisteredButton")
         self.verticalLayout.addWidget(self.unregisteredButton)
+        self.errorLabel = QtWidgets.QLabel(self.centralwidget)
+        self.errorLabel.setText("")
+        self.errorLabel.setObjectName("errorLabel")
+        self.verticalLayout.addWidget(self.errorLabel)
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -66,5 +73,4 @@ class Ui_MainWindow(object):
         self.loginLabel.setText(_translate("MainWindow", "Логин:"))
         self.passwordLabel.setText(_translate("MainWindow", "Пароль:"))
         self.logInButton.setText(_translate("MainWindow", "Войти"))
-        self.passwordRecoveryButton.setText(_translate("MainWindow", "Забыли пароль?"))
         self.unregisteredButton.setText(_translate("MainWindow", "Зарегистрироваться"))
