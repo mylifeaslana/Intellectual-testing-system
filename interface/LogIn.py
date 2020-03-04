@@ -2,6 +2,7 @@ import sys
 
 from interface.Windows.logInWindow import *
 from Classes.registration import *
+from interface.registrationUI import *
 from PyQt5 import QtWidgets
 
 '''
@@ -32,14 +33,18 @@ class LogInWin(QtWidgets.QMainWindow):
 
     def __init__(self, parent=None):
         QtWidgets.QWidget.__init__(self, parent)
-        self.ui = Ui_MainWindow()
+        self.ui = Ui_LogIn()
         self.ui.setupUi(self)
         self.setFixedSize(500, 500)
         self.attempts=0
         # кнопка входа
-        attempts = self.ui.logInButton.clicked.connect(self.logInUI)
+        #while not(self.ui.loginLine.text() and self.ui.passwordLine.text()):
+            #self.ui.logInButton.setDisabled(True)
+        #if (self.ui.loginLine.text() and self.ui.passwordLine.text()):
+        #self.ui.logInButton.setDisabled(False)
+        self.ui.logInButton.clicked.connect(self.logInUI)
         # кнопка регистрации
-        self.ui.unregisteredButton.clicked.connect(self.processRegistrationUI)
+        self.ui.unregisteredButton.clicked.connect(self.registrationUI)
 
     # обработка входа
     def logInUI(self):
@@ -61,22 +66,11 @@ class LogInWin(QtWidgets.QMainWindow):
         print("1")
         pass
 
-    def processRegistrationUI(self):
+    def registrationUI(self):
         self.close()
-        self.Open = NewApp.NewApp()
+        self.Open = RegistrationWin()
         self.Open.show()
 
-        print("2")
-        pass
 
 
-# pushed button
 
-if __name__ == "__main__":
-    app = QtWidgets.QApplication(sys.argv)
-    myapp = LogInWin()
-    myapp.show()
-    with open("tmp.sys") as stream:
-        for line in stream:
-            print(line)
-    sys.exit(app.exec_())

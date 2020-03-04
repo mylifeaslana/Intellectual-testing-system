@@ -1,6 +1,6 @@
 def logIn(login,password):
     a=False
-    if(not a):
+    if(a):
         raise Exception("что не так")
     user="" #объект
     return user
