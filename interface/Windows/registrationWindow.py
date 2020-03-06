@@ -45,7 +45,7 @@ class Ui_RegistrationWindow(object):
         self.label_6.setObjectName("label_6")
         self.formLayout.setWidget(5, QtWidgets.QFormLayout.LabelRole, self.label_6)
         self.lineEdit_4 = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_4.setObjectName("lineEdit_4")
+        self.lineEdit_4.setObjectName("surnameLine")
         self.formLayout.setWidget(5, QtWidgets.QFormLayout.FieldRole, self.lineEdit_4)
         self.label_7 = QtWidgets.QLabel(self.centralwidget)
         self.label_7.setObjectName("label_7")

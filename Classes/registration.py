@@ -1,5 +1,7 @@
-from emal.massage import EmalMassage
+#from emal.massage import EmalMassage
 import smtplib
+
+from dataProcessing import users
 
 EMAIL = "zeiwjfew@yandex.ru"
 PASSWORD = "ooP123"
@@ -18,30 +20,30 @@ def check_password(password):
         return False
     return True
 
-def registration():
-    
-    login = input()
-    while !check_login(login):
+def registration(login,password,name,surname,father_name,date_of_birth,group,secret_question,secret_answer,email,tel,photo=""):
+    #login = input()
+    while not check_login(login):
         print("Such name already exists \n Please, enter another")
         login = input()
-        
+
     print("Your password should be larger than 8")
-    password = input()
-    while !check_password(password):
+    #password = input()
+    while not check_password(password):
         print("Try again")
         password = input()
-    
+
     name = input()
-    surename = input()
-    fatherName = input()
+    surname = input()
+    father_name = input()
     group = input()
-    secretQuestion = input()
+    secret_question = input()
     answer = input()
     main = input()
     tel = input()
-    #photo
-    
-    
+    return True
+
+''''
+    #вынеси в отдельную функцию
     msg = EmalMassage()
     msg['Subject'] = "Подтверждение регистрации"
     msg['From'] = EMAIL
@@ -52,26 +54,26 @@ def registration():
         smtp.login(EMAIL, PASSWORD)
         smtp.send_massage(msg)
     
-    #make an object
+    #make an object,нет,внести все данные в users
     
 def reestablishPassword(login):
     
-    print(users[login][secretQuestion])
+    print(users[login][secret_question])
     answer = input()
-    if answer == users[login][secretAnswer]:
+    if answer == users[login][secret_answer]:
         return True
-    retuen False
+    return False
     
-
+'''''
 def logIn(login, password): # вход
 
-    countOfPassing = 0
-    
+    count_of_passing = 0
+    '''''
     while count < COUNT_OF_PASSWORD:
         login, password = input(), input()
         
         try:
-            if login is not in user:
+            if login not in user:
                 raise loginException("There are no such user")
             
             if user[login][password] != password:
@@ -111,6 +113,6 @@ def logIn(login, password): # вход
     templateUser = "" #
     return user
 
-
+'''''
 def tmpLogIn(login): #временный вход
     pass

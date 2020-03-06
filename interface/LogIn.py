@@ -1,7 +1,7 @@
-import sys
+
 
 from interface.Windows.logInWindow import *
-from Classes.registration import *
+#from Classes.registration import *
 from interface.registrationUI import *
 from PyQt5 import QtWidgets
 
