@@ -75,9 +75,9 @@
            <property name="geometry">
             <rect>
              <x>0</x>
-             <y>-125</y>
+             <y>-124</y>
              <width>354</width>
-             <height>415</height>
+             <height>414</height>
             </rect>
            </property>
            <layout class="QFormLayout" name="formLayout_2">
@@ -246,6 +246,34 @@
        <attribute name="title">
         <string>Статистика</string>
        </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QScrollArea" name="scrollArea_2">
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents_2">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>367</width>
+             <height>290</height>
+            </rect>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <item>
+             <widget class="QLabel" name="label_4">
+              <property name="text">
+               <string>TextLabel</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
       </widget>
      </widget>
     </item>
